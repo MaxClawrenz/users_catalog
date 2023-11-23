@@ -1,0 +1,270 @@
+.userCatalog{
+    display: flex;
+}
+.MainFilter{
+    border-radius: 15px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 317px;
+    margin-right: 27px;
+    height: fit-content;
+    /* position: sticky; */
+    top: 0;
+}
+.HeaderFilter {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.HeaderIcon {
+    margin-right: 10px;
+    display: flex;
+}
+.HeaderTitle{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.Break{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.FilterName{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+.filterContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+input[type="checkbox"]{
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 1px solid #313A4A;
+    cursor: pointer;
+}
+.filterContainer label{
+    padding-left: 12px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.checkBoxColumnRight {
+    margin-left: 50px;
+}
+.labelsBlock{
+    margin-bottom: 11px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    cursor: pointer;
+}
+.labelsBlock label{
+    cursor: pointer;
+}
+.filterContainer input[type="text"], select{
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.10);
+    border: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(0, 0, 0, 0.50);
+}
+.filterContainer select{
+    width: 319px;
+    height: 30px;
+    padding: 5px 6px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 0.6em center;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1L7 6.5L13 1" stroke="black" stroke-opacity="0.6" stroke-linecap="round"/></svg>');
+}
+.filterContainer select:focus{
+    outline: none;
+}
+.filterContainer input[type="text"]{
+    width: 299px;
+    height: 20px;
+    padding: 5px 10px;
+}
+.filterContainer input[type="text"]:focus{
+    outline: none;
+}
+
+.MainResults{
+    border-radius: 15px;
+    background: #FFF;
+    width: 100%;
+    padding: 25px;
+}
+.SearchInput{
+    background-color: rgba(0,0,0,.1) !important;
+    border: none !important;
+    border-radius: 9px !important;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 400;
+    height: 18px;
+    line-height: normal;
+    padding: 11px 20px !important;
+    width: 96%;
+    width: -webkit-fill-available;
+    box-shadow: unset !important;
+}
+.SearchInput:focus{
+    outline: none;
+}
+
+.userCard {
+    display: flex;
+    padding: 30px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.60);
+}
+.UserPhoto {
+    margin-right: 30px;
+}
+.userImage{
+    border-radius: 6px;
+    object-fit: cover;
+}
+.userValue{
+    width: 76%;
+}
+.userProp {
+    display: flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 4px;
+    justify-content: flex-start;
+    width: 100%;
+}
+.userTitle{
+    color: #929090;
+    width: 130px;
+}
+.userName{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 17px;
+}
+.UserPhotoSkelet {
+    margin-right: 30px;
+    background: gray;
+    border-radius: 6px;
+    width: 160px;
+    height: 160px;
+}
+.userNameSkelet {
+    margin-bottom: 17px;
+    background: grey;
+    width: 290px;
+    border-radius: 4px;
+    height: 24px;
+}
+
+.userValueSkelet {
+    width: 69%;
+    background: grey;
+    height: 17px;
+    border-radius: 4px;
+}
+
+.userValueSkelet{
+    --bg-size: 500%;
+    --color-one: gray;
+    --color-two: white;
+    font-size: clamp(3rem, 25vmin, 8rem);
+    background: linear-gradient(
+        100deg,
+        var(--color-one),
+        var(--color-two),
+        var(--color-one)
+      )
+      0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: content-box;
+  }
+
+  .userNameSkelet{
+    --bg-size: 500%;
+    --color-one: gray;
+    --color-two: white;
+    font-size: clamp(3rem, 25vmin, 8rem);
+    background: linear-gradient(
+        100deg,
+        var(--color-one),
+        var(--color-two),
+        var(--color-one)
+      )
+      0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: content-box;
+  }
+  .UserPhotoSkelet{
+    --bg-size: 500%;
+    --color-one: gray;
+    --color-two: white;
+    font-size: clamp(3rem, 25vmin, 8rem);
+    background: linear-gradient(
+        100deg,
+        var(--color-one),
+        var(--color-two),
+        var(--color-one)
+      )
+      0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: content-box;
+  }
+
+
+  @media (prefers-reduced-motion: no-preference) {
+    .UserPhotoSkelet {
+      animation: move-bg 10s linear infinite;
+    }
+    @keyframes move-bg {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+  }
+
+
+  @media (prefers-reduced-motion: no-preference) {
+    .userNameSkelet {
+      animation: move-bg 10s linear infinite;
+    }
+    @keyframes move-bg {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+  }
+
+
+  @media (prefers-reduced-motion: no-preference) {
+    .userValueSkelet {
+      animation: move-bg 10s linear infinite;
+    }
+    @keyframes move-bg {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+  }
