@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { FilterState } from "../../interfaces/FilterState";
+import { FilterState } from "../../interfaces/IFilterState";
 
 type IndexedFilterState = FilterState & { [key: string]: string | boolean }
 

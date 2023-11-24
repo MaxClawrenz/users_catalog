@@ -10,8 +10,16 @@
     width: 317px;
     margin-right: 27px;
     height: fit-content;
-    /* position: sticky; */
-    top: 0;
+    display: flex;
+}
+.MainFilterView{
+  display: flex;
+}
+.CloseIcon{
+  display: none;
+}
+.maskShowed{
+  display: flex;
 }
 .HeaderFilter {
     display: flex;
@@ -268,3 +276,29 @@ input[type="checkbox"]{
       }
     }
   }
+
+.SearchBlock {
+    display: flex;
+    align-items: center;
+}
+.searchIcon{
+  display: none;
+}
+.filterIcon{
+  display: none;
+}
+.FilterMobileButton {
+  background: #0091d5;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 36px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  display: none;
+}

@@ -1,7 +1,7 @@
 //import { BaseQueryArg } from '@reduxjs/toolkit/dist/query/baseQueryTypes'
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/dist/query/react'
 import { IUser } from '../interfaces/IUser'
-import { FilterState } from '../interfaces/FilterState'
+import { FilterState } from '../interfaces/IFilterState'
 
 export const userAPI = createApi({
     reducerPath: 'userAPI',

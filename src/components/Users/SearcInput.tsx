@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useAppDispatch } from "../../hooks/redux";
 import { setFilters } from "../../store/reducers/FilterSlice";
+import SearchIcon from "../../icons/SearchIcon";
+import FilterIcon from "../../icons/FilterIcon";
 
 function SearcInput() {
   const [textName, setTextName] = useState<string>("");
@@ -20,6 +22,9 @@ function SearcInput() {
 
   return (
     <div className="SearchBlock">
+      <div className="searchIcon">
+        <SearchIcon />
+      </div>
       <input
         value={textName}
         onChange={handleChangeName}
@@ -27,6 +32,9 @@ function SearcInput() {
         className="SearchInput"
         type="text"
       />
+      <div className="filterIcon">
+        <FilterIcon />
+      </div>
     </div>
   );
 }

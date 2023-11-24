@@ -7,7 +7,7 @@ import filterReducer from './reducers/FilterSlice'
 const rootReducer = combineReducers({
     userReducer,
     [userAPI.reducerPath]: userAPI.reducer,
-    filterReducer
+    filterReducer,
 })
 
 

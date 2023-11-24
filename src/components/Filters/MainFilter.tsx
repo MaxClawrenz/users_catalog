@@ -5,6 +5,7 @@ import FilterCity from "./Filter/FilterCity";
 import FilterCompany from "./Filter/FilterCompany";
 import FilterDepartment from "./Filter/FilterDepartment";
 import FilterEmail from "./Filter/FilterEmail";
+import FilterMobileButton from "./Filter/FilterMobileButton";
 import FilterPosition from "./Filter/FilterPosition";
 import FilterSex from "./Filter/FilterSex";
 import FilterSubdivision from "./Filter/FilterSubdivison";
@@ -46,6 +47,7 @@ function MainFilter() {
       <FilterBlock name={"Активность"}>
         <FilterActivity />
       </FilterBlock>
+      <FilterMobileButton />
     </div>
   );
 }
