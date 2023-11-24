@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAppDispatch } from "../../../hooks/redux";
 import { setFilters } from "../../../store/reducers/FilterSlice";
+import useDebounce from "../../../hooks/useDebounce";
 
 function FilterSubdivision() {
   const [subdiv, setSubdiv] = useState<string>("");
@@ -10,13 +11,11 @@ function FilterSubdivision() {
     setSubdiv(event.target.value);
   }
 
-  useEffect(() => {
-    if (subdiv.length > 2) {
-      dispatch(setFilters({ filterName: "subdivision", filterValue: subdiv }));
-    } else if (subdiv.length === 0) {
-      dispatch(setFilters({ filterName: "subdivision", filterValue: subdiv }));
-    }
-  }, [subdiv, dispatch]);
+  function setFilterDebounce() {
+    dispatch(setFilters({ filterName: "subdivision", filterValue: subdiv }));
+  }
+
+  useDebounce(setFilterDebounce, 800, subdiv);
 
   return (
     <div className="filterContainer">

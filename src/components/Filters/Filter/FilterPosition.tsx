@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAppDispatch } from "../../../hooks/redux";
 import { setFilters } from "../../../store/reducers/FilterSlice";
+import useDebounce from "../../../hooks/useDebounce";
 
 function FilterPosition() {
   const [position, setPosition] = useState<string>("");
@@ -10,13 +11,11 @@ function FilterPosition() {
     setPosition(event.target.value);
   }
 
-  useEffect(() => {
-    if (position.length > 4) {
-      dispatch(setFilters({ filterName: "position", filterValue: position }));
-    } else if (position.length === 0) {
-      dispatch(setFilters({ filterName: "position", filterValue: position }));
-    }
-  }, [position, dispatch]);
+  function setFilterDebounce() {
+    dispatch(setFilters({ filterName: "position", filterValue: position }));
+  }
+
+  useDebounce(setFilterDebounce, 800, position);
 
   return (
     <div className="filterContainer">

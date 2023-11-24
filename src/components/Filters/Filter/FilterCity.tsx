@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAppDispatch } from "../../../hooks/redux";
 import { setFilters } from "../../../store/reducers/FilterSlice";
+import useDebounce from "../../../hooks/useDebounce";
 
 function FilterCity() {
   const [city, setCity] = useState<string>("");
@@ -10,13 +11,11 @@ function FilterCity() {
     setCity(event.target.value);
   }
 
-  useEffect(() => {
-    if (city.length > 4) {
-      dispatch(setFilters({ filterName: "city", filterValue: city }));
-    } else if (city.length === 0) {
-      dispatch(setFilters({ filterName: "city", filterValue: city }));
-    }
-  }, [city, dispatch]);
+  function setFilterDebounce() {
+    dispatch(setFilters({ filterName: "city", filterValue: city }));
+  }
+
+  useDebounce(setFilterDebounce, 800, city);
 
   return (
     <div className="filterContainer">

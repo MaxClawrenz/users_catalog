@@ -3,6 +3,7 @@ import { useAppDispatch } from "../../hooks/redux";
 import { setFilters } from "../../store/reducers/FilterSlice";
 import SearchIcon from "../../icons/SearchIcon";
 import FilterIcon from "../../icons/FilterIcon";
+import useDebounce from "../../hooks/useDebounce";
 
 function SearcInput() {
   const [textName, setTextName] = useState<string>("");
@@ -12,13 +13,11 @@ function SearcInput() {
     setTextName(event.target.value);
   }
 
-  useEffect(() => {
-    if (textName.length > 4) {
-      dispatch(setFilters({ filterName: "name", filterValue: textName }));
-    } else if (textName.length === 0) {
-      dispatch(setFilters({ filterName: "name", filterValue: textName }));
-    }
-  }, [textName, dispatch]);
+  function setFilterDebounce() {
+    dispatch(setFilters({ filterName: "name", filterValue: textName }));
+  }
+
+  useDebounce(setFilterDebounce, 800, textName);
 
   return (
     <div className="SearchBlock">

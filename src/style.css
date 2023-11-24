@@ -14,12 +14,13 @@
 }
 .MainFilterView{
   display: flex;
+  z-index: 19000;
 }
 .CloseIcon{
   display: none;
 }
 .maskShowed{
-  display: flex;
+  display: flex !important;
 }
 .HeaderFilter {
     display: flex;

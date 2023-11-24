@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAppDispatch } from "../../../hooks/redux";
 import { setFilters } from "../../../store/reducers/FilterSlice";
+import useDebounce from "../../../hooks/useDebounce";
 
 function FilterEmail() {
   const [email, setEmail] = useState<string>("");
@@ -10,13 +11,11 @@ function FilterEmail() {
     setEmail(event.target.value);
   }
 
-  useEffect(() => {
-    if (email.length > 4) {
-      dispatch(setFilters({ filterName: "email", filterValue: email }));
-    } else if (email.length === 0) {
-      dispatch(setFilters({ filterName: "email", filterValue: email }));
-    }
-  }, [email, dispatch]);
+  function setFilterDebounce() {
+    dispatch(setFilters({ filterName: "email", filterValue: email }));
+  }
+
+  useDebounce(setFilterDebounce, 800, email);
 
   return (
     <div className="filterContainer">
