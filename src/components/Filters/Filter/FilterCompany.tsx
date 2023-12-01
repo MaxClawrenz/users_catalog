@@ -21,7 +21,7 @@ function FilterCompany() {
   return (
     <div className="filterContainer">
       <div className="checkBoxColumnLeft">
-        <div className="labelsBlock">
+        <div className="labelsBlock" id="labelsBlock_BD">
           <input
             onChange={handleCompanyChange}
             value="7137262226269955805"
@@ -31,7 +31,7 @@ function FilterCompany() {
           />
           <label htmlFor="BD">Быстроденьги</label>
         </div>
-        <div className="labelsBlock">
+        <div className="labelsBlock" id="labelsBlock_TZ">
           <input
             onChange={handleCompanyChange}
             value="7137270169382290802"
@@ -43,7 +43,7 @@ function FilterCompany() {
         </div>
       </div>
       <div className="checkBoxColumnRight">
-        <div className="labelsBlock">
+        <div className="labelsBlock" id="labelsBlock_EqvantaLab">
           <input
             onChange={handleCompanyChange}
             value="7137298841389065561"
@@ -53,7 +53,7 @@ function FilterCompany() {
           />
           <label htmlFor="SR">EqvantaLab</label>
         </div>
-        <div className="labelsBlock">
+        <div className="labelsBlock" id="labelsBlock_SanoraRus">
           <input
             onChange={handleCompanyChange}
             value="7137249226813999821"

@@ -20,7 +20,8 @@ function SearcInput() {
   useDebounce(setFilterDebounce, 800, textName);
 
   return (
-    <div className="SearchBlock">
+    <div className="SearchBlock"
+    id="SearchBlock_guide">
       <div className="searchIcon">
         <SearchIcon />
       </div>
@@ -30,6 +31,7 @@ function SearcInput() {
         placeholder="Поиск"
         className="SearchInput"
         type="text"
+        id="SearchInput_white"
       />
       <div className="filterIcon">
         <FilterIcon />
