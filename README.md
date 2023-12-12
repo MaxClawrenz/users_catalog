@@ -2,7 +2,6 @@
 
 
 Стэк:
-
 React, 
 TypeScript, 
 RTK, RTK Query, 
