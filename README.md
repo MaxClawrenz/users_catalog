@@ -1,14 +1,14 @@
 # Справочник пользователей
 
+
 Стэк:
 
-React
-
-TypeScript
-
-RTK, RTK Query
-
+React, 
+TypeScript, 
+RTK, RTK Query, 
 Webpack
+
+
 
 
 Справочник сотрудников для ГК Eqvanta.
