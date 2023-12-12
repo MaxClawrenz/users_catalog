@@ -8,6 +8,7 @@ TypeScript,
 RTK, RTK Query, 
 Webpack
 
+<img width="480" alt="image" src="https://github.com/MaxClawrenz/users_catalog/assets/142581038/c6245d0f-43ae-4976-af0b-abf67c432857">
 
 
 
